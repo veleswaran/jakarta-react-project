@@ -37,11 +37,18 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       template: './public/index.html',
+      filename:"index.html",
+      inject:true
+    }),
+      new HtmlWebpackPlugin({
+      template: './public/home.html',
+      filename:"home.html",
+      inject:false
     }),
   ],
   devServer: {
     static: './dist',
-    port: 3000,
+    port: 3005,
     open: true,
     hot: true,
     historyApiFallback: true 
