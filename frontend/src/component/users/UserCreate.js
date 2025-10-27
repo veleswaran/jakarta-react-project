@@ -13,6 +13,10 @@ export default class UserCreate extends Component {
         e.preventDefault();
         console.log("the user data is ",this.state.users)
         const res = await axios.post("http://localhost:8080/jakarta-demo/api/users",this.state?.users)
+        if(res.status === 201){
+            console.log("User created successfully")
+            window.location.href = "/users"
+        }
     }
 
     onchange=(e)=>{

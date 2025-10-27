@@ -1,5 +1,6 @@
 import axios from "axios";
 import React,{ Component } from "react";
+import { Link } from "react-router-dom";
 
 export default class UserList extends Component{
     constructor(props){
@@ -25,7 +26,10 @@ export default class UserList extends Component{
     onDelete=(id)=>{
         let deleteUser = async()=>{
             const res = await axios.delete(`http://localhost:8080/jakarta-demo/api/users/${id}`)
-            console.log(res)
+            if(res.status === 204){
+                console.log("User deleted successfully")
+                window.location.reload();
+            }
         }
         deleteUser();
     }
@@ -38,6 +42,8 @@ export default class UserList extends Component{
     render(){
         return(
             <div className="container">
+                <h1 className="my-3 text-center">User list</h1>
+                <Link to="/user/create" className="btn btn-primary mb-3">Create New User</Link>
                 <table className="table table-dark">
                     <thead>
                         <tr>
