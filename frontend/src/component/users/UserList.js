@@ -57,8 +57,8 @@ export default class UserList extends Component{
                     </thead>
                     <tbody>
                         {
-                            this.state?.users?.map((val)=>
-                            <tr>
+                            this.state?.users?.map((val,index)=>
+                            <tr key={index}>
                                 <td>{val.id}</td>
                                 <td>{val.username}</td>
                                 <td>{val.email}</td>

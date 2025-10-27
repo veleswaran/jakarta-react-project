@@ -6,7 +6,7 @@ export default class Layout extends React.Component {
         return (
             <div>
                 <Nav />
-                <div class="mt-3" style={{minHeight:"80vh"}}>
+                <div className="mt-3" style={{minHeight:"80vh"}}>
                     {this.props.children}
                 </div>
                 <Footer />
