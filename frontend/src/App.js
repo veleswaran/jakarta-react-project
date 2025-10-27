@@ -10,7 +10,7 @@ import Careers from "./component/Career.js";
 export default class App extends Component {
     render() {
         return (
-            <BrowserRouter>
+            <BrowserRouter basename="/jakarta-demo">
                 <Layout>
                     <Routes>
                         <Route path="/" element={<>Home page</>} />
