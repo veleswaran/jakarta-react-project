@@ -37,13 +37,13 @@ export default class UserList extends Component{
     onEdit = (id)=>{
         console.log(id)
         localStorage.setItem("id",id)
-        window.location.href = "/user/edit"
+        window.location.href = "/users/edit"
     }
     render(){
         return(
             <div className="container">
                 <h1 className="my-3 text-center">User list</h1>
-                <Link to="/user/create" className="btn btn-primary mb-3">Create New User</Link>
+                <Link to="/users/create" className="btn btn-primary mb-3">Create New User</Link>
                 <table className="table table-dark">
                     <thead>
                         <tr>
